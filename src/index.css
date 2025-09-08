@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom loader styles and utilities remain untouched */
+@layer utilities {
+    .preloaded .line:after {
+      opacity: 0;
+    }
+
+    .preloaded .line {
+      opacity: 0;
+      height: 100% !important;
+    }
+
+    .preloaded:before,
+    .preloaded:after {
+      -webkit-animation: finishanimation 500ms ease-in-out 500ms forwards;
+      -o-animation: finishanimation 500ms ease-in-out 500ms forwards;
+      animation: finishanimation 500ms ease-in-out 500ms forwards;
+    }
+
+    @keyframes finishanimation {
+      0% {
+        width: 50%;
+      }
+
+      100% {
+        width: 0;
+      }
+    }
+}
+
