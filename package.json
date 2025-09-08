@@ -1,5 +1,6 @@
 {
   "name": "frank-chinonso-profile",
+  "homepage": "https://chinonso-okoroafor.github.io/portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
@@ -16,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^3.0.0",
     "classnames": "*",
+    "gh-pages": "^6.3.0",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
