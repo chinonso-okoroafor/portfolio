@@ -270,8 +270,13 @@ export const useHelpers = () => {
         // If all values are zero
         return parts.length > 0 ? parts.join(' ') : '0 seconds';
     }
-        
 
+    const canShowMobileHeader = (screenWidth, activeSection, targetedSection, minScreenWidth=577) => {
+        if (screenWidth >= minScreenWidth ) return true;
+        if (screenWidth <= minScreenWidth && activeSection === targetedSection) return true;
+        return false;
+    }
+        
     return {
         ERROR_ICON,
         SUCCESS_ICON,
@@ -296,6 +301,7 @@ export const useHelpers = () => {
         countOccurrences,
         nameToInitials,
         convertSecondsToHMS,
-        formatTimeObjectHMS
+        formatTimeObjectHMS,
+        canShowMobileHeader
     }
 }

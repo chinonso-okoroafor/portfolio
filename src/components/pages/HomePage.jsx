@@ -1,10 +1,25 @@
 import profileImg from '../../assets/img/franklin-chinonso.png';
 import mobileProfileImg from '../../assets/img/franklin-chinonso-mobile.png';
-import { Link } from 'react-router-dom';
+import { useAppContext } from '../../context/GlobalAppContextProvider';
+import { useHelpers } from '../../hooks/useHelpers';
 
-const HomePage = () => {
+const HomePage = ({ sectionsRef, mobileActiveHeader }) => {
+
+    const HOME = 'home';
+    const { windowDimensions } = useAppContext();
+    const { canShowMobileHeader } = useHelpers();
+
     return (
-        <div className="page page--current" id="home">
+        <section ref={(el) => sectionsRef.current[HOME] = el } data-name="home" className="page page--current" id="home">
+            {
+                canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, HOME, 991) &&
+                    <div className="title-section text-left text-sm-center text-xs-center">
+                        <h2>
+                            Hello <span>Dear</span>
+                        </h2>
+                        <span className="title-bg">Welcome</span>
+                    </div>
+            }
             <div className="home">
                 <div className="container-fluid main-container container-home p-0">
                     <div className="color-block d-none d-lg-block"></div>
@@ -30,7 +45,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

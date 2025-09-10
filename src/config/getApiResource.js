@@ -3,7 +3,7 @@ import { useEntrepreneurDevelopment } from "./useEntrepreneurDevelopment";
 import { usePortfolioData } from "./usePortfolioData";
 import { useRewardAndAccolade } from "./useRewardAndAccolade";
 
-export const useApiResource = () => {
+export const getApiResource = async () => {
 
     const { getAboutMe } = useAboutMe();
     const { getPortfolio } = usePortfolioData();

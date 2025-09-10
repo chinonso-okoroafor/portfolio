@@ -2,17 +2,20 @@ import mainImage from '../../assets/img/contact1.jpeg';
 import supportImage1 from '../../assets/img/contact2.jpeg';
 import supportImage2 from '../../assets/img/contact3.jpeg';
 import { useAppContext } from '../../context/GlobalAppContextProvider';
+import { useHelpers } from '../../hooks/useHelpers';
 
-const ContactPage = () => {
+const ContactPage = ({ sectionsRef, mobileActiveHeader }) => {
 
+    const CONTACT = 'contact-me'
     const { windowDimensions } = useAppContext();
+    const { canShowMobileHeader } = useHelpers();
 
     return (
-        <div className="page" id="contact">
+        <section ref={(el) => sectionsRef.current[CONTACT] = el } data-name="contact-me" className="page" id="contact" style={{ marginBottom: windowDimensions.winWidth <= 577  ? '60px' : '0' }}>
             <div className="contact">
                 {
-                    false &&
-                    <div className="title-section text-left text-sm-center">
+                    canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, CONTACT) &&
+                    <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>
                             get in <span>touch</span>
                         </h2>
@@ -93,7 +96,7 @@ const ContactPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

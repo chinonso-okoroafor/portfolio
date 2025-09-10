@@ -1,15 +1,18 @@
+import { useAppContext } from "../../context/GlobalAppContextProvider";
 import { useHelpers } from "../../hooks/useHelpers";
 
-const CertificatesAndAwardsPage = ({ accolades }) => {
+const CertificatesAndAwardsPage = ({ accolades, sectionsRef, mobileActiveHeader }) => {
 
-    const { dateFormatter, capitalizeSentence } = useHelpers();
+    const CERT_N_AWARD = 'certificates-n-awards'
+    const { dateFormatter, capitalizeSentence, canShowMobileHeader } = useHelpers();
+    const { windowDimensions } = useAppContext();
 
     return (
-        <div className="page" id="portfolio">
+        <section ref={(el) => sectionsRef.current[CERT_N_AWARD] = el } data-name="certificates-n-awards" className="page" id="portfolio" style={{ marginBottom: windowDimensions.winWidth <= 577  ? '60px' : '0' }}>
             <div className="portfolio">
                 {
-                    false &&
-                    <div className="title-section text-left text-sm-center">
+                    canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, CERT_N_AWARD) &&
+                    <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>my <span>awards</span>
                         </h2>
                         <span className="title-bg">accolades</span>
@@ -61,7 +64,7 @@ const CertificatesAndAwardsPage = ({ accolades }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,12 +1,19 @@
+import { useAppContext } from "../../context/GlobalAppContextProvider";
+import { useHelpers } from "../../hooks/useHelpers";
 import BusinessExperienceCard from "../ui/BusinessExperienceCard"
 
-const EntrepreneurDevelopmentPage = ({ businesses }) => {
+const EntrepreneurDevelopmentPage = ({ businesses, sectionsRef, mobileActiveHeader }) => {
+
+    const ENTREPRENEURSHIP = 'entrepreneurship'
+    const { windowDimensions } = useAppContext();
+    const { canShowMobileHeader } = useHelpers();
+
     return (
-        <div className="page" id="portfolio">
+        <section ref={(el) => sectionsRef.current[ENTREPRENEURSHIP] = el } data-name="entrepreneurship" className="page" id="about" style={{ marginBottom: windowDimensions.winWidth <= 577  ? '60px' : '0' }}>
             <div className="portfolio">
                 {
-                    false &&
-                    <div className="title-section text-left text-sm-center">
+                    canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, ENTREPRENEURSHIP) &&
+                    <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>my <span>businesses</span>
                         </h2>
                         <span className="title-bg">entrepreneurship</span>
@@ -27,7 +34,7 @@ const EntrepreneurDevelopmentPage = ({ businesses }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
