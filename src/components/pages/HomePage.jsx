@@ -12,7 +12,7 @@ const HomePage = ({ sectionsRef, mobileActiveHeader }) => {
     return (
         <section ref={(el) => sectionsRef.current[HOME] = el } data-name="home" className="page page--current" id="home">
             {
-                canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, HOME, 991) &&
+                windowDimensions.winWidth <= 991 && canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, HOME, 991) &&
                     <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>
                             Hello <span>Dear</span>
