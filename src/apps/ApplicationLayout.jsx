@@ -54,7 +54,7 @@ const ApplicationLayout = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setMobileActiveHeader(entry.target.dataset.name);
-            console.log(entry.target.dataset.name);
+            // console.log(entry.target.dataset.name);
           }
         });
       },
