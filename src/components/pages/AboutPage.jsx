@@ -37,11 +37,14 @@ const AboutPage = ({ aboutMe, portfolio, accolade }) => {
 
     return (
         <div className="" id="about">
-            <div className="title-section text-left text-sm-center text-xs-center">
-                <h2>ABOUT <span>ME</span>
-                </h2>
-                <span className="title-bg">Resume</span>
-            </div>
+            {
+                true &&
+                <div className="title-section text-left text-sm-center text-xs-center">
+                    <h2>ABOUT <span>ME</span>
+                    </h2>
+                    <span className="title-bg">Resume</span>
+                </div>
+            }
             <div className="about">
                 <div className="main-content">
                     <div className="container">
@@ -62,9 +65,13 @@ const AboutPage = ({ aboutMe, portfolio, accolade }) => {
                                         />
                                     </div>
                                     <div className="col-12 mt-3">
-                                        <a className="button" href="#">
-                                            <span className="button-text">Download CV</span>
-                                            <span className="button-icon fa fa-download"></span>
+                                        <a className="button"
+                                            href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284" 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="button-text">View LinkedIn</span>
+                                            <span className="button-icon fa fa-link"></span>
                                         </a>
                                     </div>
                                 </div>
@@ -169,9 +176,9 @@ const AboutPage = ({ aboutMe, portfolio, accolade }) => {
                         <hr className="separator mt-1" />
                         <div className="row">
                             <div className="col-12">
-                            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">Experience <span>&</span> Education </h3>
+                            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">Experience</h3>
                             </div>
-                            <div className="col-lg-6 m-15px-tb">
+                            <div className="col-12 m-15px-tb">
                                 <div className="resume-box">
                                     <ul>
                                         {
@@ -197,7 +204,13 @@ const AboutPage = ({ aboutMe, portfolio, accolade }) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-6 m-15px-tb">
+                        </div>
+                        <hr className="separator mt-1" />
+                        <div className="row">
+                            <div className="col-12">
+                            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">Education </h3>
+                            </div>
+                            <div className="col-12 m-15px-tb">
                                 <div className="resume-box">
                                     <ul>
                                         {

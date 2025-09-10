@@ -102,3 +102,7 @@ body.light .blog .page-link:hover,
 .features-list strong{
 	color: #FFF;
 }
+
+.contact-links a {
+	color: #9acd32;
+}

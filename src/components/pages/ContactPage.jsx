@@ -10,33 +10,60 @@ const ContactPage = () => {
     return (
         <div className="page" id="contact">
             <div className="contact">
-                <div className="title-section text-left text-sm-center">
-                    <h2>
-                        get in <span>touch</span>
-                    </h2>
-                    <span className="title-bg">contact</span>
-                </div>
+                {
+                    false &&
+                    <div className="title-section text-left text-sm-center">
+                        <h2>
+                            get in <span>touch</span>
+                        </h2>
+                        <span className="title-bg">contact</span>
+                    </div>
+                }
                 <div className="main-content">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-lg-4">
                                 <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Don't be shy !</h3>
                                 <p className="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                                <p className="open-sans-font custom-span-contact position-relative">
-                                    <i className="fa fa-envelope-open position-absolute"></i>
-                                    <span className="d-block">mail me</span>chinonso.okoroafor@outlook.com
+                                <p className="open-sans-font custom-span-contact position-relative contact-links">
+                                    <a 
+                                        href="mailto:chinonso.okoroafor@outlook.com" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="fa fa-envelope-open position-absolute"></i>
+                                        <span className="d-block">mail me</span>chinonso.okoroafor@outlook.com
+                                    </a>
                                 </p>
-                                <p className="open-sans-font custom-span-contact position-relative">
-                                    <i className="fa fa-linkedin-square position-absolute"></i>
-                                    <span className="d-block">LinkedIn Profile</span>https://www.linkedin.com/in/chinonso-okoroafor-57086a284
+                                <p className="open-sans-font custom-span-contact position-relative contact-links">
+                                    <a 
+                                        href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="fa fa-linkedin-square position-absolute"></i>
+                                        <span className="d-block">LinkedIn Profile</span>https://www.linkedin.com/in/chinonso-okoroafor-57086a284
+                                    </a>
                                 </p>
-                                <p className="open-sans-font custom-span-contact position-relative">
-                                    <i className="fa fa-facebook-square position-absolute"></i>
-                                    <span className="d-block">Facebook Profile</span>@chinonso-okoroafor
+                                <p className="open-sans-font custom-span-contact position-relative contact-links">
+                                    <a 
+                                        href="https://www.facebook.com/" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="fa fa-facebook-square position-absolute"></i>
+                                        <span className="d-block">Facebook Profile</span>@chinonso-okoroafor
+                                    </a>
                                 </p>
-                                <p className="open-sans-font custom-span-contact position-relative">
-                                    <i className="fa-brands fa-x-twitter position-absolute"></i>
-                                    <span className="d-block">X Profile</span>@chinonso-okoroafor
+                                <p className="open-sans-font custom-span-contact position-relative contact-links">
+                                    <a 
+                                        href="https://www.x.com/" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="fa-brands fa-x-twitter position-absolute"></i>
+                                        <span className="d-block">X Profile</span>@chinonso-okoroafor
+                                    </a>
                                 </p>
                             </div>
                             <div className="col-12 col-lg-8">
@@ -58,7 +85,6 @@ const ContactPage = () => {
                                                     <img width={windowDimensions.winWidth <= 767 ? 956 : 482} height={windowDimensions.winWidth <= 767 ? 700 : 350} src={supportImage2} className="img-responsive attachment-full" alt="" loading="lazy" sizes="(max-width: 482px) 100vw, 482px" />
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

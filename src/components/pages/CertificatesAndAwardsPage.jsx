@@ -7,11 +7,14 @@ const CertificatesAndAwardsPage = ({ accolades }) => {
     return (
         <div className="page" id="portfolio">
             <div className="portfolio">
-                <div className="title-section text-left text-sm-center">
-                    <h2>my <span>awards</span>
-                    </h2>
-                    <span className="title-bg">accolades</span>
-                </div>
+                {
+                    false &&
+                    <div className="title-section text-left text-sm-center">
+                        <h2>my <span>awards</span>
+                        </h2>
+                        <span className="title-bg">accolades</span>
+                    </div>
+                }
                 <div className="main-content text-center">
                     <div id="grid-gallery" className="container grid-gallery">
                         <div className="row">

@@ -37,11 +37,14 @@ const PortfolioPage = ({ portfolio }) => {
     return (
         <div className="page" id="portfolio">
             <div className="portfolio">
-                <div className="title-section text-left text-sm-center">
-                    <h2>my <span>portfolio</span>
-                    </h2>
-                    <span className="title-bg">works</span>
-                </div>
+                {
+                    false &&
+                    <div className="title-section text-left text-sm-center">
+                        <h2>my <span>projects</span>
+                        </h2>
+                        <span className="title-bg">works</span>
+                    </div>
+                }
                 <div className="main-content text-center">
                     <div id="grid-gallery" className={`container grid-gallery ${ showPortfolioProjectDetails ? 'slideshow-open' : '' }`}>
                         <div className="grid-wrap">
