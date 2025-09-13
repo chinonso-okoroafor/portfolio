@@ -69,39 +69,11 @@ const AboutPage = ({ aboutMe = {}, portfolio = 0, accolade = 0, sectionsRef, mob
         <div className="main-content">
           <div className="container">
             <div className="row">
-              {/* Personal Info */}
-              <div className="col-12 col-lg-5 col-xl-6">
-                <div className="row">
-                  <div className="col-12">
-                    <h3 className="text-uppercase custom-title mb-0 ft-wt-600">
-                      personal infos
-                    </h3>
-                  </div>
-                  <div className="col-6">
-                    <PersonalInformation personalInformationCollection={arrayFirstHalf} />
-                  </div>
-                  <div className="col-6">
-                    <PersonalInformation personalInformationCollection={arraySecondHalf} />
-                  </div>
-                  <div className="col-12 mt-3">
-                    <a
-                      className="button"
-                      href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="button-text">View LinkedIn</span>
-                      <span className="button-icon fa fa-link"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
               {/* Stats */}
-              <div className="col-12 col-lg-7 col-xl-6 mt-5 mt-lg-0">
+              <div className="col-12 col-md-10 offset-md-2">
                 <div className="row">
                   {yearsOfExperience > 0 && (
-                    <div className="col-6">
+                    <div className="col-12 col-sm-6">
                       <div className="box-stats with-margin">
                         <h3 className="poppins-font position-relative">
                           {yearsOfExperience}
@@ -113,7 +85,7 @@ const AboutPage = ({ aboutMe = {}, portfolio = 0, accolade = 0, sectionsRef, mob
                     </div>
                   )}
                   {portfolio > 0 && (
-                    <div className="col-6">
+                    <div className="col-12 col-sm-6">
                       <div className="box-stats with-margin">
                         <h3 className="poppins-font position-relative">{portfolio}</h3>
                         <p className="open-sans-font m-0 position-relative text-uppercase">
@@ -123,8 +95,8 @@ const AboutPage = ({ aboutMe = {}, portfolio = 0, accolade = 0, sectionsRef, mob
                     </div>
                   )}
                   {accolade > 0 && (
-                    <div className="col-6">
-                      <div className="box-stats">
+                    <div className="col-12 col-sm-6">
+                      <div className="box-stats with-margin">
                         <h3 className="poppins-font position-relative">{accolade}</h3>
                         <p className="open-sans-font m-0 position-relative text-uppercase">
                           awards <span className="d-block">won</span>
@@ -132,6 +104,20 @@ const AboutPage = ({ aboutMe = {}, portfolio = 0, accolade = 0, sectionsRef, mob
                       </div>
                     </div>
                   )}
+
+                  <div className="col-12  col-sm-6 d-flex justify-content-center align-items-center">
+                    <div className="with-margin">
+                      <a
+                        className="button"
+                        href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="button-text">View LinkedIn</span>
+                        <span className="button-icon fa fa-link"></span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -223,8 +209,8 @@ const AboutPage = ({ aboutMe = {}, portfolio = 0, accolade = 0, sectionsRef, mob
                           <i className="fa fa-briefcase"></i>
                         </div>
                         <span className="time open-sans-font text-uppercase">
-                          {`${exp.startMonth || ""} ${exp.start || ""}`.trim()} -{" "}
-                          {`${exp.stopMonth || ""} ${exp.stop || ""}`.trim()}
+                          { exp.start === exp.stop ? `${exp.startMonth}` : `${exp.startMonth || ""} ${exp.start || ""}`.trim() } - {" "}
+                          { `${exp.stopMonth || ""} ${exp.stop || ""}`.trim() }
                         </span>
                         <h5 className="poppins-font text-uppercase">
                           {exp.jobDescription}{" "}

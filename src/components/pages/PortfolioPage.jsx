@@ -14,6 +14,7 @@ const PortfolioPage = ({ portfolioData = [], sectionsRef, mobileActiveHeader }) 
 
   const handleViewPortfolioProjectDetails = (e, index) => {
     e?.preventDefault();
+    // e?.persist();
     if (typeof index === "number") {
       setActiveProjectIndex(index);
     }
@@ -91,7 +92,7 @@ const PortfolioPage = ({ portfolioData = [], sectionsRef, mobileActiveHeader }) 
             </div>
 
             <PortfolioProjectDetails
-              portfolio={portfolio}
+              portfolio={portfolioData}
               activeProjectIndex={activeProjectIndex}
               handleViewPortfolioProjectDetails={handleViewPortfolioProjectDetails}
             />

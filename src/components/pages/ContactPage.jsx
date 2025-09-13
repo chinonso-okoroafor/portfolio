@@ -25,69 +25,47 @@ const ContactPage = ({ sectionsRef, mobileActiveHeader }) => {
                 <div className="main-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-12 col-lg-4">
-                                <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Don't be shy !</h3>
-                                <p className="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                                <p className="open-sans-font custom-span-contact position-relative contact-links">
-                                    <a 
-                                        href="mailto:chinonso.okoroafor@outlook.com" 
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <i className="fa fa-envelope-open position-absolute"></i>
-                                        <span className="d-block">mail me</span>chinonso.okoroafor@outlook.com
-                                    </a>
-                                </p>
-                                <p className="open-sans-font custom-span-contact position-relative contact-links">
-                                    <a 
-                                        href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284" 
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <i className="fa fa-linkedin-square position-absolute"></i>
-                                        <span className="d-block">LinkedIn Profile</span>https://www.linkedin.com/in/chinonso-okoroafor-57086a284
-                                    </a>
-                                </p>
-                                <p className="open-sans-font custom-span-contact position-relative contact-links">
-                                    <a 
-                                        href="https://www.facebook.com/" 
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <i className="fa fa-facebook-square position-absolute"></i>
-                                        <span className="d-block">Facebook Profile</span>@chinonso-okoroafor
-                                    </a>
-                                </p>
-                                <p className="open-sans-font custom-span-contact position-relative contact-links">
-                                    <a 
-                                        href="https://www.x.com/" 
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <i className="fa-brands fa-x-twitter position-absolute"></i>
-                                        <span className="d-block">X Profile</span>@chinonso-okoroafor
-                                    </a>
-                                </p>
-                            </div>
-                            <div className="col-12 col-lg-8">
+                            <div className="col-12 col-md-8 offset-md-2">
+                                <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3 text-center">WORK WITH ME</h3>
+                                <p className="open-sans-font mb-3 text-center">As an early-career data analyst, I’ve built projects that highlight my skills in data cleaning, visualization, and storytelling. I'm eager to contribute to meaningful work, collaborate on ideas, and keep expanding my expertise.</p>
                                 <div className="row">
-                                    <div className="col-md-8 no-margin-no-padding">
+                                    <p className="open-sans-font custom-span-contact position-relative contact-links col-12 col-sm-6">
+                                        <a 
+                                            href="mailto:chinonso.okoroafor@outlook.com" 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i className="fa fa-envelope-open position-absolute"></i>
+                                            <span className="d-block">Email</span>
+                                        </a>
+                                    </p>
+                                    <p className="open-sans-font custom-span-contact position-relative contact-links col-12 col-sm-6">
+                                        <a 
+                                            href="https://www.linkedin.com/in/chinonso-okoroafor-57086a284" 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i className="fa fa-linkedin-square position-absolute"></i>
+                                            <span className="d-block">LinkedIn</span>
+                                        </a>
+                                    </p>
+                                    <p className="open-sans-font custom-span-contact position-relative contact-links col-12 col-sm-6">
+                                        <a 
+                                            href="https://github.com/chinonso-okoroafor/" 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i className="fa fa-github position-absolute"></i>
+                                            <span className="d-block">Github</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-8 offset-md-2">
+                                <div className="row">
+                                    <div className="col-md-12 mt-5">
                                         <div className="fancy-header">
-                                            <img width="956" height="700" src={mainImage} className="img-responsive attachment-full" alt="" loading="lazy"  sizes="(max-width: 956px) 100vw, 956px" />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 no-margin-no-padding">
-                                        <div className="row">
-                                            <div className="col-md-12 col-sm-12 no-margin-no-padding">
-                                                <div className="fancy-nav"> 
-                                                    <img width={windowDimensions.winWidth <= 767 ? 956 : 482} height={windowDimensions.winWidth <= 767 ? 700 : 350} src={supportImage1} className="img-responsive attachment-full" alt="" loading="lazy"  sizes="(max-width: 482px) 100vw, 482px" />
-                                                </div>
-                                            </div>
-                                            <div className="col-md-12 col-sm-12 no-margin-no-padding">
-                                                <div className="fancy-nav"> 
-                                                    <img width={windowDimensions.winWidth <= 767 ? 956 : 482} height={windowDimensions.winWidth <= 767 ? 700 : 350} src={supportImage2} className="img-responsive attachment-full" alt="" loading="lazy" sizes="(max-width: 482px) 100vw, 482px" />
-                                                </div>
-                                            </div>
+                                            <img src={mainImage} className="img-responsive attachment-full" alt="" loading="lazy" style={{ borderRadius: '30px' }} />
                                         </div>
                                     </div>
                                 </div>

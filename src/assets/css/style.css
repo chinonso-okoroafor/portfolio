@@ -551,6 +551,7 @@ body.light hr.separator {
 	}
 }
 /*** Buttons ***/
+.linked-btn,
 .button {
   overflow: hidden;
   display: inline-block;
@@ -575,6 +576,7 @@ body.light hr.separator {
   outline: none !important;
 }
 
+.linked-btn .button-text,
 .button .button-text {
   position: relative;
   z-index: 2;
@@ -1616,6 +1618,16 @@ ol ol {
 	transition: all 0.3s ease-in;
 }
 
+.contact .custom-span-contact {
+	font-weight: 600;
+	padding-left: 50px;
+	line-height: 21px;
+	padding-top: 5px;
+	display: flex;
+	align-items: center;
+	min-height: 45px;
+}
+
 /* [ RESPONSIVE DESIGN STYLES ] */
 
 @media (min-width: 1351px) {
@@ -2149,9 +2161,11 @@ ol ol {
   }
 }
 
-
-
 .no-margin-no-padding {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.linked-btn:hover .button-text {
+  text-decoration: underline !important;
 }

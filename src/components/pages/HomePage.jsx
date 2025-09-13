@@ -15,7 +15,7 @@ const HomePage = ({ sectionsRef, mobileActiveHeader }) => {
                 windowDimensions.winWidth <= 991 && canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, HOME, 991) &&
                     <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>
-                            Hello <span>Dear</span>
+                            Data <span>Alchemist</span>
                         </h2>
                         <span className="title-bg">Welcome</span>
                     </div>
@@ -29,10 +29,13 @@ const HomePage = ({ sectionsRef, mobileActiveHeader }) => {
                             <div>
                                 <img  src={mobileProfileImg} className="img-fluid main-img-mobile d-none d-sm-block d-lg-none mb-0" alt="my picture" />
                                 <h1 className="text-uppercase poppins-font">
-                                    Chinonso Franklin Okoroafor.
+                                    Chinonso Franklin Okoroafor
                                 </h1>
-                                <p className="text-uppercase poppins-font mb-4" style={{margin: '0px', lineHeight: '15px', fontSize: '12px'}}>
+                                <p className="text-uppercase poppins-font" style={{margin: '0px', lineHeight: '15px', fontSize: '12px'}}>
                                     Data & Business Intelligence Analyst <strong style={{padding: '0px 3px'}}>|</strong> Entrepreneur
+                                </p>
+                                <p className="text-uppercase poppins-font mb-4 project-subtitle" style={{margin: '0px', lineHeight: '15px', fontSize: '12px'}}>
+                                    - UNITED KINGDOM
                                 </p>
                                 <p className="open-sans-font">
                                     Transforming data into strategy: delivering predictive, NLP, and analytics solutions that drive measurable business impact.

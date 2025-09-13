@@ -4,7 +4,7 @@ export const usePortfolioData = () => {
         {
             id: 1,
             title: "Operational Efficiency Project | Royal Naval Base, Ministry of Defence, UK",
-            goal: 'Collaborated as part of a team commissioned through the Ministry of Defence’s HAC programme to address tool management challenges across Royal Naval Bases in the UK. The objective was to improve accountability, reduce tool losses, and enhance operational efficiency.',
+            goal: "Collaborated as part of a team commissioned through the Ministry of Defence's HACK4MOD programme to address tool management challenges across Royal Naval Bases in the UK. The objective was to improve accountability, reduce tool losses, and enhance operational efficiency.",
             projectActivities: [
                 'Conducted on-site visits to three different naval bases and carried out structured interviews with senior officers, including commanders, lieutenants, and technical staff, to fully understand operational pain points.',
                 'Identified systemic issues with missing tools, which created operational delays and increased costs.',
@@ -20,7 +20,7 @@ export const usePortfolioData = () => {
             ],
             impactAndRecognition: [
                 'The project delivered actionable recommendations directly to military stakeholders, addressing both short-term needs and long-term strategic improvements.',
-                'Recognition received from the Ministry of Defence HAC programme, acknowledging the team’s contribution to operational innovation. Verification of this recognition is available on LinkedIn.'
+                "Recognition received from the Ministry of Defence HACK4MOD programme, acknowledging the team's contribution to operational innovation. Verification of this recognition is available on LinkedIn."
             ],
             keyContributions: [],
             skillsAndTools: "Operational research, stakeholder interviews, prototyping, problem-solving, MVP development, teamwork, process improvement, applied analytics in military logistics.",

@@ -91,7 +91,7 @@ export const useAboutMe = () => {
             },{
                 company: 'Ericnelly Communications',
                 jobDescription: 'Apprentice Computer & Mobile Phone Technician',
-                operationalSummary: 'Assisted senior technicians in diagnosing and repairing computers and mobile devices, gaining hands-on experience in hardware troubleshooting, software maintenance, and customer support.',
+                operationalSummary: 'Assisted senior technicians in diagnosing and repairing computers and mobile devices, gained hands-on experience in hardware troubleshooting, software maintenance, and customer support.',
                 start: 2014,
                 stop: 2014,
                 startMonth: 'Jan.',
