@@ -15,7 +15,7 @@ const HomePage = ({ sectionsRef, mobileActiveHeader }) => {
                 windowDimensions.winWidth <= 991 && canShowMobileHeader(windowDimensions.winWidth, mobileActiveHeader, HOME, 991) &&
                     <div className="title-section text-left text-sm-center text-xs-center">
                         <h2>
-                            Hello Dear Data <span>Alchemist</span>
+                            Data <span>Alchemist</span>
                         </h2>
                         <span className="title-bg">Welcome</span>
                     </div>
